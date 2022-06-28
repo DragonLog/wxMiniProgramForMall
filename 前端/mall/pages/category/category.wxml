@@ -1,0 +1,14 @@
+<!--pages/category/category.wxml-->
+<!-- <text>pages/category/category.wxml</text> -->
+<mp-vtabs vtabs="{{vtabs}}" >
+  <block wx:for="{{vtabs}}" wx:key="title" >
+    <mp-vtabs-content tabIndex="{{index}}">
+      <view class="vtabs-content-item">
+        <view wx:for="{{item.goods}}" wx:key="index" class="item" bindtap="handleTap" data-goodid="{{item.goodId}}" data-title="{{item.title}}">
+          <image src="http://localhost:8080/{{item.poster}}" mode="widthFix"/>
+          <view>{{item.title}}</view>
+        </view>
+      </view>
+    </mp-vtabs-content>
+  </block>
+</mp-vtabs>

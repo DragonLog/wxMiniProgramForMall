@@ -1,0 +1,13 @@
+<!--pages/telform/telform.wxml-->
+<!-- <text>pages/telform/telform.wxml</text> -->
+<!--WXML示例代码-->
+<mp-form-page title="手机号绑定" subtitle="您的手机号将会与微信绑定">
+    <view slot="button">
+        <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+    </view>
+    <mp-cells>
+      <mp-cell prop="mobile" title="手机号" ext-class="weui-cell_vcode">
+        <input bindinput="formInputChange" data-field="mobile" class="weui-input" placeholder="请输入手机号"/>
+      </mp-cell>
+    </mp-cells>
+</mp-form-page>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zcx.wxMiniApp.mapper.CartMapper">
+
+    <update id="updateCheckedToFalse">
+        update cart
+        set checked = false
+        where cart_id in (
+        <if test="cartIds == null or cartIds.length == 0">
+            null
+        </if>
+        <if test="cartIds != null and cartIds.length != 0">
+            <foreach collection="cartIds" item="cartId" separator=",">
+                #{cartId}
+            </foreach>
+        </if>
+        )
+    </update>
+
+    <update id="updateCheckedToTrue">
+        update cart
+        set checked = true
+        where cart_id in (
+        <if test="cartIds == null or cartIds.length == 0">
+            null
+        </if>
+        <if test="cartIds != null and cartIds.length != 0">
+            <foreach collection="cartIds" item="cartId" separator=",">
+                #{cartId}
+            </foreach>
+        </if>
+        )
+    </update>
+
+</mapper>

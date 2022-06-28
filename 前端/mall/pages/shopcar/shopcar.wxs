@@ -1,0 +1,23 @@
+function sum(list) {
+  var total = 0;
+  for (var i = 0; i < list.length; i ++) {
+    if(list[i].checked) {
+      total += list[i].good.price * list[i].number;
+    }
+  }
+  return total;
+}
+
+function check(list) {
+  if(list.length===0){
+    return false;
+  }
+  return list.every(function(item){
+    return item.checked===true
+  });
+}
+
+module.exports={
+  sum:sum,
+  check:check
+}

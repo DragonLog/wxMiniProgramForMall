@@ -1,0 +1,29 @@
+/* pages/shopcar/shopcar.wxss */
+.cellfooter text{
+  width: 60rpx;
+  display: inline-block;
+  background-color: gainsboro;
+  text-align: center;
+}
+
+.content{
+  display: flex;
+}
+
+.content image{
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height:80rpx;
+  line-height:80rpx;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  z-index: 10;
+}

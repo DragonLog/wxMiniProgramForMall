@@ -1,0 +1,26 @@
+<!--pages/home/home.wxml-->
+<!-- <text>pages/home/home.wxml</text> -->
+<!-- <button bindtap="handleGet">ajax-get</button>
+<button bindtap="handlePost">ajax-post</button>
+<button bindtap="handlePut">ajax-put</button>
+<button bindtap="handleDelete">ajax-delete</button> -->
+<swiper indicator-dots="{{true}}">
+  <swiper-item wx:for="{{loopList}}" wx:key="index">
+    <image src="http://localhost:8080/{{item.url}}" mode="widthFix" />
+  </swiper-item>
+</swiper>
+
+<mp-sticky offset-top="0">
+  <view style="width: 100vw;">
+    <zcx-search bindevent="handleEvent"></zcx-search>
+  </view>
+</mp-sticky>
+
+<view wx:for="{{goodList}}" wx:key="index" class="goodbox" bindtap="handleChangePage" data-goodid="{{item.goodId}}" data-title="{{item.title}}">
+  <image src="http://localhost:8080/{{item.poster}}" mode="widthFix" />
+  <view>
+    <view>{{item.title}}</view>
+    <view style="color: red;">价格：￥{{item.price}}</view>
+    <view>好评率：{{item.goodComment}}</view>
+  </view>
+</view>

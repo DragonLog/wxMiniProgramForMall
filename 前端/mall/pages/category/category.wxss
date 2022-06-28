@@ -1,0 +1,25 @@
+/* pages/category/category.wxss */
+.vtabs-content-item {
+  display:flex;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.vtabs-content-item .item{
+  width: 50%;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.item image{
+  width:200rpx;
+}
+
+.item view{
+  text-align: center;
+}
+
+page{
+  background-color: #FFFFFF;
+  height: 100%;
+}
